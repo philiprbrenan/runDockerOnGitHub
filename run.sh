@@ -5,16 +5,12 @@ echo 'Inside container on Ubuntu'
 apt-get update  -qq                          1>/dev/null 2>/dev/null
 apt-get install -qq build-essential curl git 1>/dev/null 2>/dev/null
 
-# State
+# Files
 
 ls -la
-pwd
-whoami
-echo $HOME
 
 # Uv
 curl -Ls https://astral.sh/uv/install.sh | bash
-export PATH="$HOME/.cargo/bin:$PATH"
 source $HOME/.local/bin/env
 uv --version
 uv venv

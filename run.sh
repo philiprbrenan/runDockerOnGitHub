@@ -2,8 +2,8 @@ echo 'Inside container on Ubuntu'
 
 # Configure
 
-apt-get update  -qq
-apt-get install -qq build-essential curl git tree
+apt-get update  -qq                          1>/dev/null 2>/dev/null
+apt-get install -qq build-essential curl git 1>/dev/null 2>/dev/null
 
 # State
 

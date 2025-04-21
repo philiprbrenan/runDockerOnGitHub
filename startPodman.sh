@@ -8,7 +8,7 @@ CONTAINER_NAME="gh-action-$(uuidgen | cut -d'-' -f1)"                           
 sudo apt update              1>/dev/null 2>/dev/null
 sudo apt install -y podman   1>/dev/null 2>/dev/null
 
-echo "Starting Docker container: $CONTAINER_NAME"
+echo "Starting Podman container: $CONTAINER_NAME"
 
 podman run --rm -q  --name "$CONTAINER_NAME" -v "$PWD":"$TARGET_DIR_IN_CONTAINER" -w "$TARGET_DIR_IN_CONTAINER" "$IMAGE" bash run.sh
 

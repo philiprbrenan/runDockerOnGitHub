@@ -1,4 +1,4 @@
-name: Use Docker to isolate a Github Action on a local runner
+name: Use Podman to isolate a Github Action on a local runner
 
 on:
   push:

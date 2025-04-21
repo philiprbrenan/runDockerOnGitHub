@@ -7,4 +7,4 @@ CONTAINER_NAME="gh-action-$(uuidgen | cut -d'-' -f1)"                           
 
 echo "Starting Docker container: $CONTAINER_NAME"
 
-docker run --rm  --name "$CONTAINER_NAME" -v "$PWD":"$TARGET_DIR_IN_CONTAINER" -w "$TARGET_DIR_IN_CONTAINER" "$IMAGE" bash run.sh
+docker run --rm -q  --name "$CONTAINER_NAME" -v "$PWD":"$TARGET_DIR_IN_CONTAINER" -w "$TARGET_DIR_IN_CONTAINER" "$IMAGE" bash run.sh
